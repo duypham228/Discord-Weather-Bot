@@ -1,5 +1,5 @@
 # Discord-Weather-Bot
-# Team Members:
+## Team Members:
 * Duy Duc Dao
 * Duy Pham
 * Long Huynh
