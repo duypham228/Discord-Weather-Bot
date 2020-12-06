@@ -6,4 +6,4 @@
 * An Phan
 
 ## Important Link
-[Google Doc for Project Design] (https://docs.google.com/document/d/1nBFq2As0M0AnLuiXPtYQiv2h9XFqSadd80-WpTHApG8/edit?usp=sharing)
+[Google Doc for Project Design](https://docs.google.com/document/d/1nBFq2As0M0AnLuiXPtYQiv2h9XFqSadd80-WpTHApG8/edit?usp=sharing)
