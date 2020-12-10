@@ -1,0 +1,22 @@
+{
+  "name": "discord-weather-bot",
+  "version": "1.0.0",
+  "description": "* Duy Duc Dao\r * Duy Pham\r * Long Huynh\r * An Phan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duypham228/Discord-Weather-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duypham228/Discord-Weather-Bot/issues"
+  },
+  "homepage": "https://github.com/duypham228/Discord-Weather-Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
