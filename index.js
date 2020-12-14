@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const {prefix, token} = require('./config.json');
+const {prefix, token, apikey} = require('./config.json');
 
 bot.on('ready', () => {
     console.log("Connected as " + bot.user.tag);
@@ -57,7 +57,7 @@ bot.on('message', message => {
 
         // help menu
         case "help": // list of available command
-            
+
 
         // unknown command
         default: 
