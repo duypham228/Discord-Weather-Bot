@@ -1,0 +1,26 @@
+body{
+    background-color: white;
+    color:white;
+    background-image: url('../img/background.jpg');
+
+    font-family: Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif;
+    font-size:30px ;
+}
+
+
+h1{
+    width: 1000px;
+    height: 800px;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+#button1{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    background-color:white;
+    color: white;
+    padding: 10px 10px;
+    font-size: 16px;
+}
