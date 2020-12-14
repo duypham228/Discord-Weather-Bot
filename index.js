@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const fetch = require('node-fetch');
+const querystring = require('querystring');
 const {prefix, token, apikey} = require('./config.json');
 
 bot.on('ready', () => {
@@ -10,7 +12,7 @@ bot.login(token);
 
 
 // parse command
-bot.on('message', message => {
+bot.on('message', async message => {
     if (message.author.bot) return; // return if the sender is a bot
     if (!message.content.startsWith(prefix)) return; // return if the message is not a command
 
@@ -27,30 +29,37 @@ bot.on('message', message => {
     switch (command) {
         // general data
         case "weather": // ?weather loc1
-            loc1 = arguments[0];
+            loc1 = arguments.join(" ");
             // api call
-
+            
             // send back message to user and delete the command
-            message.delete();
+            // message.delete();
             message.channel.send("The weather at " + loc1 + " is ....");
             break;
         
         // single datum
         case "temp": // ?temp loc1
-            loc1 = arguments[0];
+            loc1 = arguments.join(" ");
             // api call
-
+            
+            let getTemp = async () => {
+                let query = querystring.stringify({q: loc1, appid: apikey, units: "metric"});
+                let response = await fetch (`https://api.openweathermap.org/data/2.5/weather?${query}`).then(response => response.json());
+                // let json = await response.json();
+                return response;
+            };
             // send back message to user and delete the command
-            message.delete();
-            message.channel.send("The temperature at " + loc1 + " is ....");
+            let data = await getTemp();
+            // message.delete();
+            message.channel.send(`The temperature at ${loc1}, ${data.sys.country} is ${data.main.temp} Celcius`);
             break;
         
         case "humd": // ?humd loc1
-            loc1 = arguments[0];
+            loc1 = arguments.join(" ");
             // api call
 
             // send back message to user and delete the command
-            message.delete();
+            // message.delete();
             message.channel.send("The humidity at " + loc1 + " is ....");
             break;
         
