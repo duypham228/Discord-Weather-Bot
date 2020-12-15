@@ -137,19 +137,11 @@ footer .footer-description{
     font-weight: 400px;
     margin-left: 2%;
 }
-footer .fa-linkedin{
-    background: black;
-    color: white;
-}
+
 .footer-buttons {
     background: black;
+    color: white;
+    position: relative;
+    margin: left;
+    
 }
-/* Style all of the social media icon 
-footer .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-}
-*/
