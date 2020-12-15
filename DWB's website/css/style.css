@@ -55,7 +55,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background: rgba(0, 0, 0, 0.7);
-    border-radius: 6px;
+    border-radius: 15px;
 }
 
 .description {
@@ -113,7 +113,7 @@ footer a {
     padding-top: 3px;
     padding-bottom: 3px;
     background: rgb(7, 61, 131);
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 18px;
     margin-right: 15px;
 }
