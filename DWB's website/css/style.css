@@ -85,20 +85,16 @@ nav ul li a:hover {
     font-size: 3em;
 }
 
-.cmds {
+.cmdsTitle {
     text-align: center;
     display: block;
 }
 
 .commands {
-    margin-left: 37%;
-    margin-bottom: 1%;
-    width: 25%;
-    padding-left: 30px;
-    padding-top: 3px;
-    padding-bottom: 3px;
     background: rgb(7, 61, 131);
     border-radius: 10px;
+    padding: 1%;
+    margin: 1% 27% 1% 27%;
 }
 
 footer {
