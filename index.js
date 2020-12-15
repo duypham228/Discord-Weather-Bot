@@ -44,7 +44,9 @@ bot.on('message', async message => {
             
             let getTemp = async () => {
                 let query = querystring.stringify({q: loc1, appid: apikey, units: "metric"});
+                console.log(query);
                 let response = await fetch (`https://api.openweathermap.org/data/2.5/weather?${query}`).then(response => response.json());
+                
                 // let json = await response.json();
                 return response;
             };
@@ -66,7 +68,10 @@ bot.on('message', async message => {
 
         // help menu
         case "help": // list of available command
-
+            break;
+        case "forecast":
+            
+            break;
 
         // unknown command
         default: 

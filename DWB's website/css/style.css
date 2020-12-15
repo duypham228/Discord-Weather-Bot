@@ -137,16 +137,13 @@ footer .footer-description{
     font-weight: 400px;
     margin-left: 2%;
 }
-.github{
+footer .fa-linkedin{
     background: black;
     color: white;
-
 }
-footer .fa-linkedin{
-    background: #007bb5;
-    color: white;
+.footer-buttons {
+    background: black;
 }
-
 /* Style all of the social media icon 
 footer .fa {
     padding: 20px;
