@@ -107,53 +107,25 @@ nav ul li a:hover {
         left: 15%;
     }
     .description {
-        font-size: small;
-        /*
+       
         position: absolute;
         width: 60%;
         top: 50%;
         left: 15%;
         font-size: large;
         text-align: center;
-        */
     }
         nav ul li a {
-       display: none;
-    }
+            text-align: center;
+            width:100%;    }
     footer{
         display:none;
     }
     nav .login{
-        display:none;
+        text-align: center;
+            width:100%;
     }
-}/*-------------------Max width of Ipad--------------------------------*/ 
-@media(max-width: 1050px){
-    nav .Logo {
-       display:block;
-    }
-    .title{        
-        height: 30%;
-        font-size: 190%;
-        text-align: left;
-        border: 1px solid red;
-    }
-    .description {
-       padding-top: 20px;
-        font-size: 100%;
-        border: 1px solid red;
-        text-align: left;
-    }
-        nav ul li a {
-       display: none;
-    }
-    footer{
-        display:none;
-    }
-    nav .login{
-        display:none;
-    }
-}
-/*-------------------Max width of 1000px--------------------------------*/ 
+} 
 
 .cmdsTitle {
     text-align: center;
