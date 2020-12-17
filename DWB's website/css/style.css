@@ -43,11 +43,11 @@ nav .Logo {
     font-weight: bold;
     color: #fff;
 }
-.logo_size{
+
+.logo_size {
     border: 1px solid red;
     width: 20%;
     height: auto;
-
 }
 
 nav ul {
@@ -79,12 +79,7 @@ nav ul li a:hover {
     left: 18%;
     font-size: 1em;
     color: #fff;
-<<<<<<< HEAD
     margin-top: 1%;
-=======
-    border: 1px solid red;
-    text-align: left;
->>>>>>> d7941daf28b591a7d9460eb923aa6061e015f54b
 }
 
 .title {
@@ -96,13 +91,14 @@ nav ul li a:hover {
     font-size: 2em;
     border: 1px solid red;
 }
-@media(max-width: 768px){
+
+@media(max-width: 768px) {
     nav .Logo {
-        padding: 15% 25%; /* padding order: top right*/
+        padding: 15% 25%;
+        /* padding order: top right*/
         width: 100%;
-        
     }
-    .title{
+    .title {
         font-size: xx-large;
         width: 60%;
         height: 100px;
@@ -111,7 +107,6 @@ nav ul li a:hover {
         left: 15%;
     }
     .description {
-       
         position: absolute;
         width: 60%;
         top: 50%;
@@ -119,17 +114,18 @@ nav ul li a:hover {
         font-size: large;
         text-align: center;
     }
-        nav ul li a {
-            text-align: center;
-            width:100%;    }
-    footer{
-        display:none;
-    }
-    nav .login{
+    nav ul li a {
         text-align: center;
-            width:100%;
+        width: 100%;
     }
-} 
+    footer {
+        display: none;
+    }
+    nav .login {
+        text-align: center;
+        width: 100%;
+    }
+}
 
 .cmdsTitle {
     text-align: center;
