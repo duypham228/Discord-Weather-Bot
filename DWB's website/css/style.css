@@ -80,6 +80,7 @@ nav ul li a:hover {
     left: 18%;
     font-size: 1.3em;
     color: #fff;
+    border: 1px solid red;
 }
 
 .title {
