@@ -37,7 +37,6 @@ nav .login {
 }
 
 nav .Logo {
-    padding: 22px 20px;
     height: 80px;
     float: left;
     font-size: 24px;
@@ -78,14 +77,15 @@ nav ul li a:hover {
     width: 20%;
     top: 46%;
     left: 18%;
-    font-size: 1.3em;
+    font-size: 100%;
     color: #fff;
     border: 1px solid red;
+    text-align: center;
 }
 
 .title {
     position: absolute;
-    width: 25%;
+    width: 35%;
     height: 20%;
     top: 15%;
     left: 18%;
@@ -95,7 +95,7 @@ nav ul li a:hover {
 @media(max-width: 768px){
     nav .Logo {
         padding: 15% 25%; /* padding order: top right*/
-        width: 300px;
+        width: 100%;
         
     }
     .title{
@@ -123,7 +123,34 @@ nav ul li a:hover {
     nav .login{
         display:none;
     }
+}/*-------------------Max width of Ipad--------------------------------*/ 
+@media(max-width: 1050px){
+    nav .Logo {
+       display:block;
+    }
+    .title{        
+        height: 30%;
+        font-size: 190%;
+        text-align: left;
+        border: 1px solid red;
+    }
+    .description {
+       padding-top: 20px;
+        font-size: 100%;
+        border: 1px solid red;
+        text-align: left;
+    }
+        nav ul li a {
+       display: none;
+    }
+    footer{
+        display:none;
+    }
+    nav .login{
+        display:none;
+    }
 }
+/*-------------------Max width of 1000px--------------------------------*/ 
 
 .cmdsTitle {
     text-align: center;
