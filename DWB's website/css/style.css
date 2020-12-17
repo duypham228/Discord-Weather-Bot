@@ -44,6 +44,12 @@ nav .Logo {
     font-weight: bold;
     color: #fff;
 }
+.logo_size{
+    border: 1px solid red;
+    width: 20%;
+    height: auto;
+
+}
 
 nav ul {
     list-style: none;
@@ -82,7 +88,40 @@ nav ul li a:hover {
     height: 20%;
     top: 15%;
     left: 18%;
-    font-size: 3em;
+    font-size: 2em;
+    border: 1px solid red;
+}
+@media(max-width: 768px){
+    nav .Logo {
+        padding: 15% 25%; /* padding order: top right*/
+        width: 300px;
+        
+    }
+    .title{
+        font-size: xx-large;
+        width: 60%;
+        height: 100px;
+        text-align: center;
+        top: 40%;
+        left: 15%;
+    }
+    .description {
+        position: absolute;
+        width: 60%;
+        top: 50%;
+        left: 15%;
+        font-size: large;
+        text-align: center;
+    }
+        nav ul li a {
+       display: none;
+    }
+    footer{
+        display:none;
+    }
+    nav .login{
+        display:none;
+    }
 }
 
 .cmdsTitle {
