@@ -90,7 +90,7 @@ header #login {
 }
 
 #showcase p {
-    margin: 1% 0 0 18%;
+    margin: 1% 0 13% 18%;
     font-size: 40px;
     font-weight: bold;
     width: 20%;
@@ -101,13 +101,19 @@ header #login {
 
 #boxes {
     color: #ffffff;
+    background-color: rgb(0, 0, 0, 0.5);
 }
 
 #boxes .box {
     float: left;
     width: 30%;
+    padding: 10px;
+    text-align: center;
 }
 
 footer {
+    background-color: rgb(3, 30, 54);
+    padding: 30px;
     color: #ffffff;
+    text-align: center;
 }
