@@ -73,9 +73,11 @@ header #login {
     margin-top: 0.4%;
     margin-right: 6%;
 }
-.logo_size{
+
+.logo_size {
     height: 90px;
 }
+
 
 /* Showcase */
 
@@ -104,24 +106,24 @@ header #login {
 
 #boxes {
     background-color: rgb(15, 67, 112);
-    color: #d4d3d3;
+    color: #c2c0c0;
 }
 
 #boxes .box {
     float: left;
-    margin: 1% 5.5% 1% 5.5%;
-    width: 13%;
+    margin: 5.5% 7.5% 5.5% 7.5%;
+    width: 10%;
     text-align: center;
 }
 
 #boxes .box h3 {
     font-size: 30px;
-    margin: 50% 0 0 0;
+    margin: 0 0 5% 0;
 }
 
 #boxes .box p {
-    font-size: 18px;
-    margin: 0 0 50% 0;
+    font-size: 20px;
+    margin: 0 0 0 0;
 }
 
 .footerBox {
@@ -149,7 +151,7 @@ footer .confident {
 footer .description {
     font-size: 22px;
     margin-top: 0;
-    color: #999898;
+    color: rgb(182, 182, 182);
 }
 
 footer ul {
@@ -172,17 +174,22 @@ footer #add a {
     float: right;
     color: #fff;
     text-decoration: none;
-    padding: 15px 20px 15px 20px;
+    padding: 25px 30px 25px 30px;
     font-size: 20px;
     font-weight: bold;
     background: rgb(7, 61, 131);
     border-radius: 15px;
-    margin-top: 4%;
+    margin-top: 5%;
 }
 
-@media (max-width: 768px){
-    
-    
+footer #copyright {
+    padding: 10px;
+    font-size: 18px;
+    color: #f5f5f5;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
     #showcase h1 {
         font-size: 50px;
         font-weight: bold;
@@ -190,7 +197,6 @@ footer #add a {
         width: 70%;
         text-align: center;
     }
-    
     #showcase p {
         font-size: 30px;
         font-weight: bold;
