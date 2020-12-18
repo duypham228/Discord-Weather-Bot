@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15x;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(77, 149, 216);
+    background-image: url('../img/weatherBackground.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* Global */
+
+.container {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+
+header {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #f5f5f5;
+    padding: 30px 0 25px 0;
+    min-height: 70px;
+}
+
+header nav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 12px 25px 12px 25px;
+    font-weight: bold;
+}
+
+header li {
+    float: left;
+    display: inline;
+}
+
+header #branding {
+    float: left;
+    margin-top: 0;
+    padding-right: 20px;
+}
+
+header nav {
+    float: left;
+    margin-top: 23px;
+}
+
+header nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+header #login {
+    float: right;
+    font-size: 20px;
+    padding: 10px 15px 0 15px;
+    background: rgb(230, 227, 227);
+    border-radius: 50px;
+    margin-top: 0.4%;
+    margin-right: 6%;
+}
+
+
+/* Showcase */
+
+#showcase {
+    min-height: 400px;
+    color: #ffffff;
+    margin: 3% 0 5% 0;
+}
+
+#showcase h1 {
+    font-size: 90px;
+    font-weight: bold;
+    margin: 5% 0 0 18%;
+    width: 25%;
+}
+
+#showcase p {
+    margin: 1% 0 13% 18%;
+    font-size: 40px;
+    font-weight: bold;
+    width: 20%;
+}
+
+
+/* Boxes */
+
+#boxes {
+    background-color: rgb(15, 67, 112);
+    color: #d4d3d3;
+}
+
+#boxes .box {
+    float: left;
+    margin: 0 5.5% 0 5.5%;
+    width: 13%;
+    padding: 10px;
+    text-align: center;
+}
+
+#boxes .box h3 {
+    font-size: 30px;
+    margin: 50% 0 0 0;
+}
+
+#boxes .box p {
+    font-size: 18px;
+    margin: 0 0 50% 0;
+}
+
+.footerBox {
+    float: left;
+    width: 48%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: rgb(5, 32, 66);
+    padding: 30px;
+    color: #d4d3d3;
+}
+
+footer .confident {
+    font-size: 28px;
+    margin-bottom: 0;
+    margin-top: 1%;
+}
+
+footer .description {
+    font-size: 22px;
+    margin-top: 0;
+    color: #999898;
+}
+
+footer ul {
+    float: left;
+}
+
+footer ul li {
+    float: left;
+    text-decoration: none;
+    display: inline;
+    padding: 0 10px 0 10px;
+}
+
+footer #bigIcon {
+    font-size: 40px;
+    color: #f5f5f5;
+}
+
+footer #add a {
+    float: right;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgb(7, 61, 131);
+    border-radius: 15px;
+    margin-top: 4%;
+}
