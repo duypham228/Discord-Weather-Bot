@@ -6,7 +6,7 @@ const { CanvasRenderService } = require("chartjs-node-canvas");
 
 const fetch = require("node-fetch");
 const querystring = require("querystring");
-const { prefix, token, apikey } = require("./config.json");
+const { prefix, token, apikey, airkey } = require("./config.json");
 
 //chart's width and height
 const width = 800;
@@ -53,19 +53,46 @@ bot.on("message", async(message) => {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();
     console.log();
-    // arguments
+    // default arguments
     let loc1 = "";
     let loc2 = "";
 
     // let data = null;
     let data = null;
     let units = "imperial";
+
+
+    // handle flags
+    const regexp = /(-[lu]\s+[a-z0-9\s]+)/g;
+    const str = message.content.toLowerCase();
+    let flags;
+    if (str.match(regexp) != null)
+        flags = [...str.match(regexp)];
+    else
+        flags = str.match(regexp);
+
+    if (flags == null){ // there is no flags
+        loc1 = args.join(" ");
+    } else { // there are flags
+        var i = 0;
+        for (i = 0; i < flags.length; i++){ // iterating to process each flag
+            let currentFlag = flags[i].trim();
+            let flagName = currentFlag.substr(0, currentFlag.indexOf(' '));
+            let flagArg = currentFlag.substr(currentFlag.indexOf(' ')+1);
+            if (flagName == "-l") {
+                loc1 = flagArg;
+            } else if (flagName == "-u"){
+                units = flagArg;
+            }
+        }
+    }
+    
     // console.log(arguments);
     switch (command) {
         // general data
 
         case "weather": // ?weather loc1
-            loc1 = args.join(" ");
+            
             // api call
             // this api call requires a specific location, units of measurement, and api key
             let getWeather = async() => {
@@ -89,39 +116,46 @@ bot.on("message", async(message) => {
                     .setThumbnail(
                         `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
                     )
-                    .addFields({
+                    .addFields(
+                    {
                         name: `${
-                data.weather[0].description.charAt(0).toUpperCase() +
-                data.weather[0].description.slice(1)
-              }`,
+                            data.weather[0].description.charAt(0).toUpperCase() +
+                            data.weather[0].description.slice(1)
+                        }`,
                         value: `Updated: ${convertUTTime(data.dt)}`,
-                    }, {
+                    }, 
+                    {
                         name: `Degree Type`,
                         value: `${units === "metric" ? "Celcius" : "Fahrenheit "}`,
                         inline: true,
-                    }, {
+                    }, 
+                    {
                         name: `Highest/Lowest`,
                         value: `${Math.round(data.main.temp_max)}°/${Math.round(
-                data.main.temp_min
-              )}°`,
+                            data.main.temp_min
+                        )}°`,
                         inline: true,
-                    }, {
+                    }, 
+                    {
                         name: "Feels like",
                         value: `${Math.round(data.main.feels_like)}°`,
                         inline: true,
-                    }, {
+                    }, 
+                    {
                         name: "Humidity💧",
                         value: `${data.main.humidity}%`,
                         inline: true,
-                    }, {
+                    }, 
+                    {
                         name: "Wind💨",
                         value: `${
-                units === "metric"
-                  ? covertWindSpeed(data.wind.speed)
-                  : data.wind.speed
-              } ${units === "metric" ? "km/h" : "mph"}`,
+                            units === "metric"
+                            ? covertWindSpeed(data.wind.speed)
+                            : data.wind.speed
+                            } ${units === "metric" ? "km/h" : "mph"}`,
                         inline: true,
-                    }, {
+                    }, 
+                    {
                         name: "Visibility\uD83D\uDC41",
                         value: `${Math.round(data.visibility * 0.001)} km`,
                         inline: true,
@@ -135,7 +169,6 @@ bot.on("message", async(message) => {
         case "help": // list of available command
             break;
         case "forecast":
-            loc1 = args.join(" ");
             //this function executes two api calls in order to get data of a location given
             //by user.
             let getForecast = async() => {
@@ -274,6 +307,87 @@ bot.on("message", async(message) => {
                 message.channel.send(attachment);
             };
             await setUpChart();
+            break;
+        
+
+        case "air-quality":
+            //this function executes two api calls in order to get data of a location given
+            //by user.
+            let getAir = async() => {
+                let query = querystring.stringify({
+                    token: airkey,
+                    keyword: loc1
+                });
+                //call this api to obtain latitude and longitude of the given location
+                const res1 = await fetch(
+                    `https://api.waqi.info/search/?${query}`
+                );
+                const data1 = await res1.json();
+                return data1;
+            };
+            let setUpAirMess = async() => {
+                data = await getAir();
+                // console.log(data);
+                let condition = "";
+                let score = data.data[0].aqi;
+                if (score >= 0 && score <= 50) condition = "Good";
+                else if (score > 50 && score <= 100) condition = "Moderate";
+                else if (score > 100 && score <= 150) condition = "Unhealthy for sensitive groups";
+                else if (score > 150 && score <= 200) condition = "Unhealthy";
+                else if (score > 200 && score <= 300) condition = "Very Unhealthy";
+                else if (score > 300) condition = "Hazardous";
+
+
+                
+                const embed = new Discord.MessageEmbed()
+                    .setTitle(`Air Quality of ${loc1}`)
+                    .addFields(
+                    {
+                        name: "Station Name",
+                        value: data.data[0].station.name,
+                    },
+                    {
+                        name: "Condition",
+                        value: `${condition}`,
+                        inline: true,
+                    }, 
+                    {
+                        name: "Air Quality Index",
+                        value: `${Math.round(score)}`,
+                        inline: true,
+                    }
+                    );
+                
+                if (condition == "Good"){
+                    embed
+                        .attachFiles(['./air-face/good.png'])
+                        .setThumbnail('attachment://good.png');
+                } else if (condition == "Moderate"){
+                    embed
+                        .attachFiles(['./air-face/moderate.png'])
+                        .setThumbnail('attachment://moderate.png');
+                } else if (condition == "Unhealthy for sensitive groups"){
+                    embed
+                        .attachFiles(['./air-face/unhealthy-sensitive.png'])
+                        .setThumbnail('attachment://unhealthy-sensitive.png');
+                } else if (condition == "Unhealthy"){
+                    embed
+                        .attachFiles(['./air-face/unhealthy.png'])
+                        .setThumbnail('attachment://unhealthy.png');
+                } else if (condition == "Very Unhealthy"){
+                    embed
+                        .attachFiles(['./air-face/vunhealthy.png'])
+                        .setThumbnail('attachment://vunhealthy.png');
+                } else {
+                    embed
+                        .attachFiles(['./air-face/hazardous.png'])
+                        .setThumbnail('attachment://hazardous.png');
+                }
+                
+
+                message.channel.send(embed);
+            };
+            await setUpAirMess();
             break;
 
             // unknown command
