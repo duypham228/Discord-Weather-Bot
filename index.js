@@ -6,7 +6,11 @@ const { CanvasRenderService } = require("chartjs-node-canvas");
 
 const fetch = require("node-fetch");
 const querystring = require("querystring");
-const { prefix, token, apikey, airkey } = require("./config.json");
+// const { prefix, token, apikey, airkey } = require("./config.json");
+const prefix = process.env.prefix;
+const token = process.env.token;
+const apikey = process.env.apikey;
+const airkey = process.env.airkey;
 
 //chart's width and height
 const width = 800;
