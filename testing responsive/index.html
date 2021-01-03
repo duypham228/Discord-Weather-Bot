@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noob Tech Weaher Bot | Home Page</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="shortcut icon" type="image/x-icon" href="img/Weather.ico" />
 
     <!-- Add icon library -->
@@ -15,6 +16,24 @@
 </head>
 
 <body>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="https://discord.com/oauth2/authorize?client_id=786545140280983553&scope=bot&permissions=8" target="blank">Add to Discord</a></li>
+                        <li><a href="cmds.html">Commands</a></li>
+                        <li><a href="https://google.com" target="blank">Support</a></li>
+                        <li><a href="https://discord.com" target="blank">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="container">
             <div id="branding">
@@ -30,10 +49,6 @@
             <div id="login">
                 <a href="https://discord.com" target="blank"><img src="img/dslogo.jpg" height=45px></a>
             </div>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
         </div>
     </header>
 
