@@ -1,6 +1,4 @@
 .menu-wrap {
-    position: fixed;
-    top: 24px;
     right: 0;
     z-index: 1;
     display: none;
@@ -8,6 +6,7 @@
 
 .menu-wrap .toggler {
     position: absolute;
+    margin-top: 2.7%;
     top: 18px;
     right: 26px;
     z-index: 2;
@@ -19,7 +18,7 @@
 
 .menu-wrap .hamburger {
     position: absolute;
-    top: 0;
+    margin-top: 2.4%;
     right: 0;
     z-index: 1;
     width: 60px;
