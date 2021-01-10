@@ -29,7 +29,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[product-screenshot]
 
 There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -83,7 +83,12 @@ A Discord server that you are adminstrator to be able to grant permission for bo
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Weather Command:
+[weather-screenshot]
+2. Forecast Command:
+[forecast-screenshot]
+3. Air Quality Command:
+[air-screenshot]
 
 _For more examples, please refer to the [Commands Page](http://weatherbot.surge.sh/cmds.html)_
 
@@ -109,4 +114,7 @@ Project Link: [https://github.com/duypham228/Discord-Weather-Bot](https://github
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: readme-img/website.png
+[weather-screenshot]: readme-img/weather.png
+[forecast-screenshot]: readme-img/forecast.png
+[air-screenshot]: readme-img/air.png
