@@ -34,7 +34,7 @@
 There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
 Here's why:
-* Easy to Use: No setup required. It only takes one command to get music playing
+* Easy to Use: No setup required. It only takes one command to get weather report
 * Lag Free: We ensure that there is always enough capacity for every server to get the highest quality possible
 * Stable: Noob Tech Bot will always be available whenever you need to know the weather outside
 * Credible: We always retrieves data from most trustworthy weather data collectors
