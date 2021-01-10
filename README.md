@@ -45,9 +45,9 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [Discord.js](https://discord.js.org/#/)
+* [Chart.js](https://www.chartjs.org/)
+* [Surge](https://surge.sh/)
 
 
 
@@ -58,29 +58,29 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+A Discord server that you are adminstrator to be able to grant permission for bot.
 
 ### Installation
-
+#### For Deverlopers:
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/duypham228/Discord-Weather-Bot
    ```
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+4. Change loading variable from env to config.js, env variables are for heroku hosting.
+5. Enter your API in `config.js`
    ```JS
    const API_KEY = 'ENTER YOUR API';
    ```
-
+#### For Users:
+1. Follow the [link](http://weatherbot.surge.sh/) to the bot website.
+2. Invite the bot to your server.
+3. Grant the bot permission.
+4. Use the bot with commands.
 
 
 <!-- USAGE EXAMPLES -->
@@ -88,7 +88,7 @@ This is an example of how to list things you need to use the software and how to
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Documentation](http://weatherbot.surge.sh/cmds.html)_
 
 
 
@@ -103,9 +103,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Duy Pham - duyphamm228@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/duypham228/Discord-Weather-Bot](https://github.com/duypham228/Discord-Weather-Bot)
 
 
 
