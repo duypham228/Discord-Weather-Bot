@@ -29,9 +29,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[product-screenshot]
+![product-screenshot]
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+We build this Weather Discord Bot to help you be able to know the weather around the world with just few simple commands. The bot reply the report to you in the group message, so you and your friends can dicuss where to hang out easier. There is another bot available for weather, but the command prefix they use is @ which is for mentioning. Therefore, that bot is not working properly for many users, so we create this bot to fix that bug and provide even more interesting commands.
 
 Here's why:
 * Easy to Use: No setup required. It only takes one command to get weather report
@@ -41,7 +41,6 @@ Here's why:
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Discord.js](https://discord.js.org/#/)
 * [Chart.js](https://www.chartjs.org/)
 * [Surge](https://surge.sh/)
@@ -51,7 +50,6 @@ This section should list any major frameworks that you built your project using.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -84,11 +82,17 @@ A Discord server that you are adminstrator to be able to grant permission for bo
 ## Usage
 
 1. Weather Command:
-[weather-screenshot]
+
+![weather-screenshot]
+
 2. Forecast Command:
-[forecast-screenshot]
+
+![forecast-screenshot]
+
 3. Air Quality Command:
-[air-screenshot]
+
+![air-screenshot]
+
 
 _For more examples, please refer to the [Commands Page](http://weatherbot.surge.sh/cmds.html)_
 
