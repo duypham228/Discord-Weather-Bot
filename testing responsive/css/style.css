@@ -220,7 +220,7 @@ footer #copyright {
   color: white;
   font-size: larger;    
   margin-left: 40%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .air_quality{
     flex: 1;
@@ -229,7 +229,7 @@ footer #copyright {
     color: white;
     font-size: larger;    
     margin-left: 40%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
 }
 .forecast{
@@ -239,7 +239,7 @@ footer #copyright {
     color: white;
     font-size: larger;    
     margin-left: 40%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
 }
 .weather1_drop_down{
