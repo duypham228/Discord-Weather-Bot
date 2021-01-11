@@ -109,6 +109,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
+Long Huynh - peterlonghaihuynh25@gmail.com
+
 Duy Pham - duyphamm228@gmail.com
 
 Duc Dao - ducdao121598@gmail.com
