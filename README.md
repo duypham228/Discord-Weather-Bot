@@ -115,6 +115,7 @@ Duy Pham - duyphamm228@gmail.com
 
 Duc Dao - ducdao121598@gmail.com
 
+An Phan - phanthanhan2107@gmail.com
 Project Link: [https://github.com/duypham228/Discord-Weather-Bot](https://github.com/duypham228/Discord-Weather-Bot)
 
 
